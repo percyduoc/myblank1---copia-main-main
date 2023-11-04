@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Contraseña
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-grid>
+    
+    <ion-row> 
+      <ion-col sizeLg="4" sizeMD="4" sizeXs="6" >
+        <div class="card car1"><h2>Recuperar contraseña</h2></div>
+      
+        
+      </ion-col>
+      <ion-col sizeLg="12" sizeMD="12" sizeXs="12" >
+        <div id="div-fondo">
+          <div>
+            <ion-label class="center-content">Inicio </ion-label>
+            <ion-input class="center-content" label="Correo personal" ></ion-input>
+            <ion-input class="center-content" label="Nombre usuario" ></ion-input>
+          </div>
+          <div>
+            <!--
+              Navigación con una función.
+            -->
+ 
+          </div>
+          <div>
+            <!--
+              Navegación via HTML.
+            -->
+            <ion-button id="butoninici1" expand="block" >Recuperar</ion-button>
+            <ion-button expand="block" color="dark" (click)="volverinicio()" >
+              volver inicio
+            </ion-button>
+           
+
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>

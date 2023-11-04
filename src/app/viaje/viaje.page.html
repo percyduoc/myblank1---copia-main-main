@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header class="d" >
+    <ion-card button *ngFor = "let viaje of listViaje" >
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>Id</ion-label>
+            <ion-label slot="end">{{viaje.id}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Destino</ion-label>
+            <ion-label slot="end">{{viaje.destino}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Origen</ion-label>
+            <ion-label slot="end">{{viaje.destino}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Metodo Pago</ion-label>
+            <ion-label slot="end" >{{viaje.metodopago}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-header>
+</ion-content>

@@ -1,0 +1,74 @@
+
+
+<ion-content  >
+  <ion-header >
+    <ion-toolbar>
+      <ion-title size="large">Inicio de usuario </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-grid class="glass-content">
+    
+    <ion-row> 
+      <ion-col id="col1" sizeLg="12" sizeMD="12" sizeXs="12" >
+        <div class="card car1"><h2>Bienvenido a llevaApp</h2></div>
+       
+        
+      </ion-col>
+      <ion-col sizeLg="12" sizeMD="12" sizeXs="12" >
+        <div id="div-fondo">
+          <div>
+            <ion-input class="center-content" label="Nombre de usuario" [(ngModel)]="userLoginModal.correo"></ion-input>
+            <ion-input class="center-content" label="Contraseña" type="password" [(ngModel)]="userLoginModal.password"></ion-input>
+          </div>
+          <div>
+            <!--
+              Navigación con una función.
+            -->
+            <ion-button class="botoninicio" color="primary"id="butoninicio" expand="block" (click)="userLogin(userLoginModal)">Inicio </ion-button>
+          </div>
+          <div>
+         
+            <ion-button class="botoninicio" color="primary"id="butoninicio" expand="block"  (click)="registrar() " >Registrar </ion-button>
+          </div>
+          <div>
+            <!--
+              Navegación via HTML.
+            -->
+            <ion-button class="botoninicio" id="butoninici1" expand="block" [routerLink]="['/home']">Olvido la contraseña</ion-button>
+           
+
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

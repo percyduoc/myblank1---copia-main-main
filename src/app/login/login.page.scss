@@ -1,0 +1,90 @@
+#butoninicio{
+  background-color: #1255d1;
+
+}
+
+#div-fondo{
+    background-image: url(../../assets/login-img/images.jpeg);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    height: 30vh; 
+    border-radius: 1rem;
+}
+.botoninicio{
+  border-radius: 1rem;
+  
+}
+#col1{
+  background-image: url(../../assets/login-img/VdgG.gif);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  height: 30vh; 
+  border-radius: 1rem;
+}
+   
+  
+  
+  .card {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+ 
+    
+  
+    &::before,
+    &::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    &::before {
+      left: 10px;
+    }
+  
+    &::after {
+      right: 10px;
+    }
+  }
+  
+  .car1 {
+    animation: drive 4s linear infinite;
+  }
+  
+  .car2 {
+    animation: drive 4s linear infinite reverse;
+  }
+  
+  @keyframes drive {
+    0% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(120%);
+    }
+  }
+  ion-grid {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  // @keyframes slideIn {
+  //   from {
+  //     transform: translateY(-100%);
+  //     opacity: 0;
+  //   }
+  //   to {
+  //     transform: translateY(0);
+  //     opacity: 1;
+  //   }
+  // }

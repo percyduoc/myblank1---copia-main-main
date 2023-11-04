@@ -1,0 +1,66 @@
+
+<ion-content >
+  <ion-grid class="glass-content" >
+    <ion-row>
+      <div id="div-fondo" >
+        <div>
+          <div class="nuevo">
+            <form >
+              <div class="encuesta">
+                <label for="nombre">nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+              </div>
+              <div class="encuesta">
+                <label for="last_name">last_name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <br>
+              </div>
+              <div class="encuesta">
+                <label for="correo">correo:</label>
+                <input type="text" id="correo" name="correo" required>
+                <br>
+              </div>
+              <div class="encuesta">
+                <label for="birthday">birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+                <br>
+              </div>
+              <div class="encuesta">
+                <label for="type">type:</label>
+                <input type="text" id="type" name="type" required>
+                <br>
+              </div>
+              <div class="encuesta">
+                <label for="username">username:</label>
+                <input type="text" id="destino" name="username" required>
+                <br>
+              </div>
+              <div class="encuesta">
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+        <div>
+          <!--
+            Navigación con una función.
+          -->
+          <ion-button expand="block" color="dark" (click)="volverinicio()"  >
+            volver inicio
+          </ion-button>
+          <ion-button expand="block" color="dark" >
+            Agregar Viaje
+          </ion-button>
+          <ion-button expand="block" color="dark" >
+            sin funcipon
+          </ion-button>
+     
+        </div>
+      </div>
+    </ion-row>
+  </ion-grid>
+</ion-content>

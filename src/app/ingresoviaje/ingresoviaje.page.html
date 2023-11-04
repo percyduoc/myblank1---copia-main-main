@@ -1,0 +1,62 @@
+
+<ion-content [fullscreen]="true" class="ion-padding" color="dark" >
+  <ion-header >
+    <ion-toolbar>
+      <ion-title size="large">Ingreso de viaje </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-grid>
+    
+    <ion-row> 
+      <ion-col id="col1" sizeLg="12" sizeMD="12" sizeXs="12" >
+
+        
+      </ion-col >
+      <ion-col sizeLg="12" sizeMD="12" sizeXs="12" >
+        <div id="div-fondo" >
+          <div>
+            <div class="nuevo">
+              <form >
+                <div class="encuesta">
+                  <label for="nombre">Origen:</label>
+                  <input type="text" id="origen" name="origen" [(ngModel)]="nuevoViaje.origen" required>
+                  <br>
+                </div>
+                <div class="encuesta">
+                  <label for="metodopago">Metodopago:</label>
+                  <input type="metodopago" id="metodopago" name="metodopago" [(ngModel)]="nuevoViaje.metodopago" required>
+                  <br>
+                </div>
+                <div class="encuesta">
+                  <label for="destino">Destino:</label>
+                  <input type="destino" id="destino" name="destino" [(ngModel)]="nuevoViaje.destino" required>
+                  <br>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div>
+            <!--
+              Navigación con una función.
+            -->
+            <ion-button expand="block" color="dark" (click)="volverinicio()" >
+              volver inicio
+            </ion-button>
+            <ion-button expand="block" color="dark" (click)="agregarUsuario()">
+              Agregar Viaje
+            </ion-button>
+            <ion-button expand="block" color="dark" >
+              sin funcipon
+            </ion-button>
+       
+          </div>
+        </div>
+    
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+

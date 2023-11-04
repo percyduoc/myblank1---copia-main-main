@@ -1,0 +1,34 @@
+
+<ion-content class="glass-content">
+  
+  <div class="glass-content">
+    <h1 class="center-content" style="padding-bottom: 50px">Bienvenido {{ conductorInfoReceived?.name }}</h1>
+    <ion-list  [inset]="true">
+      <ion-list-header>
+        <ion-label>Conductor informacion: </ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Nombre de usuario: {{ conductorInfoReceived?.username }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nombre: {{ conductorInfoReceived?.name }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido: {{ conductorInfoReceived?.last_name }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tipo de usuario: {{ conductorInfoReceived?.type }}
+        </ion-label>
+      </ion-item>
+      <ion-button expand="block" color="dark" (click)="volverinicio()" >
+        volver inicio
+      </ion-button>
+      <ion-button expand="block" color="dark" (click)="auto()" >
+        Mostrar auto
+      </ion-button>
+  
+    </ion-list>
+  </div>
+
+
+</ion-content>
