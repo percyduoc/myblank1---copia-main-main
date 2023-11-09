@@ -45,6 +45,10 @@ ion-header {
 background: url(./assets/img/logoduoc.png) no-repeat center center / cover;
 }
 
+ion-content{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
 ion-toolbar {
     --background: transparent;
     background: rgba(19, 63, 176, 0.27);

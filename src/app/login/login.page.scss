@@ -1,22 +1,19 @@
-#butoninicio{
-  background-color: #1255d1;
 
-}
-
+// contenedor registro de usuario
 #div-fondo{
-    background-image: url(../../assets/login-img/images.jpeg);
-    background-repeat: no-repeat;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-position: center;
     height: 30vh; 
     border-radius: 1rem;
 }
+
 .botoninicio{
   border-radius: 1rem;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   
 }
+// contenedor de gif login 
 #col1{
   background-image: url(../../assets/login-img/VdgG.gif);
   background-repeat: no-repeat;
@@ -30,7 +27,7 @@
    
   
   
-  .card {
+.card {
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -56,17 +53,17 @@
     &::after {
       right: 10px;
     }
-  }
+}
   
-  .car1 {
+.car1 {
     animation: drive 4s linear infinite;
   }
   
-  .car2 {
+.car2 {
     animation: drive 4s linear infinite reverse;
   }
   
-  @keyframes drive {
+@keyframes drive {
     0% {
       transform: translateX(-120%);
     }
@@ -74,7 +71,7 @@
       transform: translateX(120%);
     }
   }
-  ion-grid {
+ion-grid {
     animation: slideIn 0.5s ease-out;
   }
   

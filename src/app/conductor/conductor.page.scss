@@ -18,7 +18,7 @@ ion-toggle {
   
     background: #ddd;
   
-    /* Required for iOS handle to overflow the height of the track */
+
     overflow: visible;
   }
   
@@ -32,14 +32,16 @@ ion-toggle {
   ion-toggle.toggle-checked::part(handle) {
     background: #95c34e;
   }
+  // color fondo
   ion-list {
-    background: url(../../assets/img/fondoduoc.png);
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    height: 50vh; 
-    border-radius: 1rem;
-    text-align: center;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    
   }
+  // color titulo
+ion-label{
+  color: #ddd;
+}
+// color datos conductor
+ion-item{
+  color: #ddd;
+}
