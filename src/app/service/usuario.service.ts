@@ -18,7 +18,7 @@ export class UsuarioService {
  constructor(private http: HttpClient, private router: Router) {
 
 }
-getusuario(): Observable<any> {
+getusuarios(): Observable<any> {
   const url = "https://rpxrcdcsnkzjlihiydjl.supabase.co/rest/v1/Usuario?select=*"
   const headers = new HttpHeaders({
     'apikey': environment.supabaseKey,
@@ -32,6 +32,22 @@ getusuario(): Observable<any> {
 
   return this.http.get<any>(url, { headers, params });
 }
+
+getusuario(usuarioID:number): Observable<any> {
+  const url = "https://rpxrcdcsnkzjlihiydjl.supabase.co/rest/v1/Usuario"
+  const headers = new HttpHeaders({
+    'apikey': environment.supabaseKey,
+    'Authorization': `Bearer ${environment.supabaseKey}`,
+ 
+  });
+
+  const params = {
+    id: `eq.${usuarioID}`
+  };
+
+  return this.http.get<any>(url, { headers, params });
+}
+
 
 
 }

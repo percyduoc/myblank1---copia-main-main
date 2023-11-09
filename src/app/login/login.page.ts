@@ -8,7 +8,7 @@ import { UserModel } from '../models/UserModel';
 import { firstValueFrom } from 'rxjs';
 import { AlumnoService } from '../service/alumno.service';
 import { UsuarioService } from '../service/usuario.service';
-
+import { Preferences } from '@capacitor/preferences';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
 
   listUser: any;
   listalumno: any;
+  usuario  :any ;
 
 
 
@@ -33,9 +34,31 @@ export class LoginPage implements OnInit {
   async ngOnInit() {
     this.userLoginModalRestart();
     this.listalumno = await firstValueFrom(this.alumnoService.getAlumnos());
-    this.listUser = await firstValueFrom(this.usuarioService.getusuario());
+    this.listUser = await firstValueFrom(this.usuarioService.getusuarios());
     console.log("lista usuario", this.listUser)
+    
 
+
+  }
+
+  async guardarusuario(){
+  const setuserid = async () => {
+    await Preferences.set({
+      key: 'userid',
+      value: 'this.usuario',
+    });
+  };
+}
+
+
+  async mostrar(){    
+
+    const checkuserid = async () => {
+      const { value } = await Preferences.get({ key: 'userid' });
+    
+      console.log(`Hello ${value}!`);
+      return value;
+    };
 
   }
 
@@ -50,6 +73,16 @@ export class LoginPage implements OnInit {
             user: this.listUser[i]
           }
         }
+
+        this.usuario = this.listUser[i];
+
+        this.guardarusuario();
+        console.log(this.mostrar());
+
+
+       
+        
+
         if(this.listUser[i].type == 'alumno'){
           this.route.navigate(['/alumno'], userInfoSend);
           return true;

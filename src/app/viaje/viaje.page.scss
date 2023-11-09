@@ -1,7 +1,7 @@
 
 ion-content{
-    --ion-background-color: url(../../assets/img/fondoduoc.png);
-    --color: rgb(201, 12, 12);
+    background: rgb(205,213,17);
+    background: linear-gradient(90deg, rgba(205,213,17,1) 55%, rgba(5,8,189,1) 100%, rgba(2,5,78,1) 100%);
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
@@ -11,6 +11,9 @@ ion-content{
     border-radius: 1rem;
     
     
+}
+ion-list{
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
 }
 ion-header {
 

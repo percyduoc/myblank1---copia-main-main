@@ -25,6 +25,8 @@ export class AlumnoPage implements OnInit {
     this.idUserHtmlRouterLink = this.activatedRoute.snapshot.params['id'];
     // Obteniendo el ID podria buscar en algún arreglo o BD el usuario con el id
     console.log("Valor obtenido desde URL: ",this.idUserHtmlRouterLink);
+
+    
    }
   ngOnInit() {
   }
@@ -39,5 +41,9 @@ export class AlumnoPage implements OnInit {
   viaje(){
     this.router.navigate(['/viaje']);
   }
+
+
+
+
   
 }

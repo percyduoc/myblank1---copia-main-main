@@ -25,4 +25,8 @@ export class ViajePage implements OnInit {
 
   }
 
+  async deleteViaje(viajeId: number){
+    const resultadodelete = await firstValueFrom(this.viaje.deleteViaje(viajeId));
+  }
+
 }

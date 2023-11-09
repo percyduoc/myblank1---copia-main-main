@@ -74,6 +74,37 @@ export class ViajesService {
     return this.http.patch<any>(url, body, { headers, params });
   }
 
+  deleteViaje(viajeid: number): Observable<any> {
+    const url = "https://rpxrcdcsnkzjlihiydjl.supabase.co/rest/v1/Viajes"
+    const headers = new HttpHeaders({
+
+      'apikey': environment.supabaseKey,
+      'Authorization': `Bearer ${environment.supabaseKey}`,
+    });
+
+
+    const params = {
+      id: `eq.${viajeid}`
+    };
+
+    return this.http.delete<any>(url, { headers, params });
+  }
+
+  // deleteAsistencia(asistenciaId: string, alumnoId: string): Observable<any> {
+  //   const headers = new HttpHeaders({
+  //     'apikey': environment.supabaseKey,
+  //     'Authorization': `Bearer ${environment.supabaseKey}`,
+  //   });
+
+  //   const params = {
+  //     asistencia_id: `eq.${asistenciaId}`,
+  //     alumno_id: `eq.${alumnoId}`
+  //   };
+
+  //   return this.http.delete<any>(`${this.apiUrlAsistenciaAlumno}`, { headers, params });
+  // }
+  // https://rpxrcdcsnkzjlihiydjl.supabase.co/rest/v1/Viajes?id=eq.18
+
 
 
 
